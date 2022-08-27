@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .info { display: none; height: 42px; }
+            body {background-color:#008ddf; color:white; font-size: 1.5em; text-shadow: black 1px 1px;}
+            footer {font-size: smaller;}
+        </style>
+    </head>
+    <body>
+        <h1>Micro Controller Component List</h1>
+        <h2 class='header' id="ESP">ESP8266 - NodeMCU</h2>
+        <div class='info' id="paraESP" onclick="hideUp()">
+            <p>
+            ESP8266 has WIFI capability, USB or VCC power inputs, ? analog pins and ? digitial pins and is programmed using the Arduino IDE
+            <ul>
+                <li>This is a powerful micro controller with WIFI capabilities. It can connect as client or server. DNS and HTTP Server libraries make it easy to program.</li>
+                <li>Powered by USB 2 cable, or via VCC (3.3 or 5V)</li>
+                <li>Built in LED</li>
+                <li>? analog pins</li>
+                <li>? digital pins</li>
+                <li>Fits nicely on standard breadboard with one bb row on each side</li>
+                <li>Programmed using Arduino IDE</li>
+                <li>Arduino set (libraries and hardware info)
+                    <ul>
+                        <li>Available soon</li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="MicroBit">MicroBit (BBC)</h2>
+        <div class='info' id="paraMicroBit">
+            <p>
+            The microbit can be powered with a USB cable or via GPIO
+            <ul>
+                <li>Onboard 5x5 pixel display</li>
+                <li>Two builtin buttons</li>
+                <li>Motion sensor</li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="ArduionoUno">Arduino Uno</h2>
+        <div class='info' id="paraArduinoUno">
+        <p>
+            Coming soon
+            <ul>
+                <li>Item 1</li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="MiniRelay">Mini RElay</h2>
+        <div class='info' id="paraMiniRelay"">
+            <p>
+                Coming soon
+                <ul>
+                    <li><Item 1</li>
+                </ul>
+            </p>
+        </div>
+        <h2 class='header' id="ACRelay"">A/C Relay</h2>
+        <div class='info' id="paraACRelay">
+            <p>
+                Coming soon
+                <ul>
+                    <li>Item 1</li>
+                </ul>
+            </p>
+        </div>
+        <footer>Click an item to display the details<br>Click the item or details to hide the details</footer>
+        <script>
+            var tasks = document.querySelectorAll('.header')
+            var details = document.querySelectorAll('.info')
+            for(let i=0; i<tasks.length; i++) {
+                console.log(`Running for loop - value = ${i}`)
+                tasks[i].addEventListener('click', function(){
+                    let state = details[i].style.display
+                    console.log(`upClick processing - state = ${state}`)
+                    if(state == 'inline')
+                        details[i].style.display = "none";
+                    else
+                        details[i].style.display = "inline";
+                    state = details[i].style.display
+                    console.log(`upClick processing - state = ${state}`)
+                })
+                details[i].addEventListener('click', function(){
+                        details[i].style.display = "none";
+                })
+            }
+        </script>
+
+    </body>
+</html>

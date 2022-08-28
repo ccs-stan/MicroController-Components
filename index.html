@@ -12,6 +12,8 @@
         <h2 class='header' id="ESP">ESP8266 - NodeMCU</h2>
         <div class='info' id="paraESP" onclick="hideUp()">
             <p>
+            <a href="https://smile.amazon.com/dp/B081CSJV2V" target="_blank">HiLetgo NodeMCU</a><br>
+            <a href="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png?quality=100&strip=all&ssl=1" target="_blank">pinout</a><br>
             ESP8266 has WIFI capability, USB or VCC power inputs, ? analog pins and ? digitial pins and is programmed using the Arduino IDE
             <ul>
                 <li>This is a powerful micro controller with WIFI capabilities. It can connect as client or server. DNS and HTTP Server libraries make it easy to program.</li>
@@ -21,12 +23,22 @@
                 <li>? digital pins</li>
                 <li>Fits nicely on standard breadboard with one bb row on each side</li>
                 <li>Programmed using Arduino IDE</li>
-                <li>Arduino set (libraries and hardware info)
-                    <ul>
-                        <li>Available soon</li>
-                    </ul>
-                </li>
+                <li>VCC 3.3 or 5V</li>
             </ul>
+            Instructions for programming:<br>
+                <pre>
+                Instruction & Steps of How to use:
+                1. Download the Arduino IDE, the latest version.
+                2. Install the IDE
+                3. Set up your Arduino IDE as: Go to File->Preferences and copy the URL below to get the ESP board manager extensions: arduino.esp8266.com/stable/package_esp8266com_index.json
+                4. Go to Tools > Board > Board Manager> Type "esp8266" and download the Community esp8266 and install.
+                5. Set up your chip as: Tools -> Board -> NodeMCU 1.0 (ESP-12E Module) Tools -> Flash Size -> 4M (3M SPIFFS) Tools -> CPU Frequency -> 80 Mhz Tools -> Upload Speed -> 921600 Tools-->Port--> (whatever it is)
+                6. Download and run the 32 bit flasher exe at Github(Search for nodemcu/nodemcu-flasher/tree/master/ at Github) github.com/nodemcu/nodemcu-flasher/tree/master/Win32/Release Or download and run the 64 bit flasher exe at: github.com/nodemcu/nodemcu-flasher/tree/master/Win64/Release
+                7. In Arduino IDE, look for the old fashioned Blink program. Load, compile and upload. 8. Go to FILE> EXAMPLES> ESP8266> BLINK, it will start blinking.
+
+                Data download access to the website: http://www.nodemcu.com/index_en.html
+                Firmware link: https://github.com/nodemcu/nodemcu-firmware
+                </pre>
         </p>
         </div>
         <h2 class='header' id="MicroBit">MicroBit (BBC)</h2>
